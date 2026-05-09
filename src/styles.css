@@ -393,8 +393,69 @@ main {
   flex: 1;
 }
 
+.certification-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
 .certification-link {
+  display: inline-flex;
+  align-items: center;
   white-space: nowrap;
+}
+
+.provider-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding-right: 4px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 8px 12px 8px 8px;
+  background: var(--bg-panel-strong);
+}
+
+.provider-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.provider-name {
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.provider-badge-coursera .provider-mark {
+  background: #0056d2;
+  color: #ffffff;
+}
+
+.provider-badge-coursera .provider-name {
+  color: #0056d2;
+}
+
+.provider-badge-udemy .provider-mark {
+  background: #a435f0;
+  color: #ffffff;
+}
+
+.provider-badge-udemy .provider-name {
+  color: #a435f0;
+}
+
+[data-theme='dark'] .provider-badge-coursera .provider-name,
+[data-theme='dark'] .provider-badge-udemy .provider-name {
+  color: inherit;
 }
 
 .contact-actions {
@@ -463,6 +524,10 @@ main {
   .certification-card {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .certification-actions {
+    justify-content: flex-start;
   }
 
   .hero-copy {

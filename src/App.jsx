@@ -81,25 +81,29 @@ const certifications = [
   {
     title: 'Java Web Development for PHP and Node.js',
     href: 'https://www.udemy.com/certificate/UC-b7672478-6499-4cfa-ade0-06b81c1cbd1f/',
+    provider: 'Udemy',
   },
   {
     title: 'Open Source Software Development, Linux and Git',
     href: 'https://www.coursera.org/account/accomplishments/specialization/QFQBA6PT3FUL',
+    provider: 'Coursera',
   },
   {
     title: 'Web Design for Everybody: Basics of Web Development',
     href: 'https://www.coursera.org/account/accomplishments/specialization/7DFV67T5V5CL',
+    provider: 'Coursera',
   },
   {
     title: 'Python 3 Programming',
     href: 'https://www.coursera.org/account/accomplishments/specialization/UBTMJP5FSFEL',
+    provider: 'Coursera',
   },
 ];
 
 const highlights = [
-  'React and TypeScript development for production web applications',
-  'REST API integration and scalable frontend architecture',
-  'Responsive UI implementation from UX wireframes and mockups',
+  'Frontend development with React, TypeScript, and responsive UI systems',
+  'Backend API integration with scalable REST-based application flows',
+  'Database-driven development using efficient backend data handling patterns',
 ];
 
 const focusAreas = [
@@ -299,14 +303,25 @@ function App() {
             {certifications.map((item) => (
               <article className="certification-card" key={item.title}>
                 <p>{item.title}</p>
-                <a
-                  className="button secondary certification-link"
-                  href={item.href}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Verify
-                </a>
+                <div className="certification-actions">
+                  <span
+                    className={`provider-badge provider-badge-${item.provider.toLowerCase()}`}
+                    aria-label={item.provider}
+                  >
+                    <span className="provider-mark">
+                      {item.provider === 'Coursera' ? 'C' : 'U'}
+                    </span>
+                    <span className="provider-name">{item.provider}</span>
+                  </span>
+                  <a
+                    className="button secondary certification-link"
+                    href={item.href}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Verify
+                  </a>
+                </div>
               </article>
             ))}
           </div>
