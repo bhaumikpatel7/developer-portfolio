@@ -370,15 +370,15 @@ function App() {
             <p className="mt-2 text-sm leading-7 text-stone-700 dark:text-stone-300">Toronto, CA</p>
           </div>
           <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-            <a className={primaryButtonClassName} href="mailto:patel9p3@uwindsor.ca">
-              patel9p3@uwindsor.ca
+            <a className={primaryButtonClassName} href="mailto:bhaumik2705@gmail.com">
+              bhaumik2705@gmail.com
             </a>
             <a className={primaryButtonClassName} href="tel:+12267242478">
               +1 (226) 724-2478
             </a>
             <a
               className={primaryButtonClassName}
-              href="https://linkedin.com/in/bhaumik-patel-181124269"
+              href="https://www.linkedin.com/in/bhaumik-patel-1060a7391"
               target="_blank"
               rel="noreferrer"
             >
