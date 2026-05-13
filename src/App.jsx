@@ -2,22 +2,22 @@ import { useEffect, useState } from 'react';
 
 const projects = [
   {
-    title: 'QR Code Generator',
+    title: 'Complete Authentication System',
     summary:
-      'Built a QR code generator with JavaScript, Axios, and an external API, including download support for saving generated codes offline.',
-    stack: 'JavaScript, Axios, External API',
+      'Built a secure authentication system with registration, login, logout, protected routes, password hashing, JWT authorization, email verification, and password reset flows.',
+    stack: 'Node.js, Express.js, MongoDB, JWT',
   },
   {
-    title: 'Random GIF Generator',
+    title: 'Full-Stack E-Commerce Website',
     summary:
-      'Created a React-based app that fetches and displays random GIFs from the Giphy API with a simple interface and optimized API calls.',
-    stack: 'React, JavaScript, Giphy API',
+      'Developed a MERN e-commerce platform with authentication, product listings, cart management, order tracking, responsive UI, and secure Stripe checkout integration.',
+    stack: 'MERN Stack, Stripe, Redux',
   },
   {
-    title: 'Tic Tac Toe',
+    title: 'AI-Powered Resume Maker',
     summary:
-      'Developed a component-driven React game with stateful player turns, win detection, and a lightweight interface using JSX and CSS.',
-    stack: 'React, JSX, CSS',
+      'Created an AI-driven resume builder that generates resume summaries, skills, projects, and experience bullet points with ChatGPT API, secure storage, and downloadable templates.',
+    stack: 'MERN Stack, ChatGPT API',
   },
 ];
 
@@ -25,55 +25,69 @@ const experience = [
   {
     period: 'Sept 2022 - Present',
     role: 'Software Engineer',
-    company: 'Manulife · Toronto, CA',
+    company: 'Manulife · Toronto, ON',
     detail:
-      'Develop and maintain responsive ReactJS applications, integrate Redux and React Hooks for scalable state management, and build web experiences aligned with UX wireframes and responsive design standards.',
+      'Develop backend services with Node.js, Express.js, RESTful APIs, SQL, authentication workflows, middleware, validation, and JSON integrations while connecting them to React and TypeScript frontends in Agile delivery teams.',
   },
   {
     period: 'Sept 2019 - May 2021',
     role: 'Software Engineer',
     company: 'Darvex Technolabs · Ahmedabad, IN',
     detail:
-      'Built full-stack applications with Next.js, React, Node.js, Express, MongoDB, and Tailwind CSS, with a focus on SSR performance, API efficiency, reusable UI, and automated testing.',
+      'Built full-stack applications with Node.js, Express.js, MongoDB, Mongoose, React.js, Next.js, Tailwind CSS, JWT authentication, CRUD APIs, and MVC-based backend architecture.',
   },
 ];
 
 const skills = [
+  'Node.js',
+  'Express.js',
+  'RESTful APIs',
+  'Authentication',
+  'JWT',
+  'OAuth',
+  'Middleware',
+  'MVC Architecture',
+  'MongoDB',
+  'PostgreSQL',
+  'SQL',
   'React',
   'Next.js',
   'JavaScript',
   'TypeScript',
-  'Node.js',
   'Python',
   'Java',
   'Redux',
-  'Express.js',
-  'Vue.js',
-  'Angular',
-  'Bootstrap',
+  'Redux Toolkit',
+  'React Hooks',
+  'HTML5',
+  'CSS3',
   'Tailwind CSS',
-  'REST APIs',
-  'MongoDB',
   'MySQL',
-  'MS SQL',
+  'MS SQL Server',
   'Oracle',
   'Azure',
   'AWS',
   'GCP',
+  'Docker',
+  'CI/CD',
+  'Git',
+  'GitHub',
+  'Jira',
   'Jest',
   'React Testing Library',
+  'Postman',
 ];
 
 const education = [
   {
     period: 'May 2021 - Sept 2022',
-    title: 'Masters in Electrical and Computer Engineering',
-    place: 'University of Windsor',
+    title: 'Master of Engineering, Electrical and Computer Engineering',
+    place: 'University of Windsor, Windsor, Canada',
   },
   {
     period: 'May 2016 - Sept 2020',
-    title: 'Bachelors in Electronics and Communication Engineering',
-    place: 'Gujarat Technological University',
+    title: 'Bachelor of Engineering, Electronics and Communication Engineering',
+    place: 'Gujarat Technological University, Gujarat, India',
   },
 ];
 
@@ -101,17 +115,17 @@ const certifications = [
 ];
 
 const highlights = [
-  'Frontend development with React, TypeScript, and responsive UI systems',
-  'Backend API integration with scalable REST-based application flows',
-  'Database-driven development using efficient backend data handling patterns',
+  'Backend development with Node.js, Express.js, REST APIs, and secure application workflows',
+  'Authentication, middleware, validation, and business logic for production-ready services',
+  'Database integration across MongoDB, SQL, and scalable API-connected web applications',
 ];
 
 const focusAreas = [
-  'Frontend Engineering',
+  'Backend Engineering',
   'Full-Stack Web Development',
-  'Responsive UI Systems',
-  'API Integration',
-  'REST APIs',
+  'REST API Development',
+  'Authentication Systems',
+  'Database Integration',
 ];
 
 const THEME_KEY = 'portfolio-theme';
@@ -189,12 +203,13 @@ function App() {
 
         <section className="grid gap-7 py-10 lg:grid-cols-[1.45fr_0.85fr] lg:items-stretch">
           <div className={`${panelClassName} rounded-[36px] p-8 sm:p-10`}>
-            <p className={eyebrowClassName}>Software Engineer · React Developer</p>
+            <p className={eyebrowClassName}>Software Engineer · Backend-Focused Full-Stack Developer</p>
             <p className="mt-6 max-w-[56ch] text-base leading-8 text-stone-700 sm:text-[1.05rem] dark:text-stone-300">
-              I&apos;m BHAUMIK PATEL, a software engineer based in Toronto with
-              experience across React, Next.js, Node.js, TypeScript, and cloud
-              platforms. I focus on turning product requirements into fast,
-              maintainable, user-friendly applications.
+              I&apos;m BHAUMIK PATEL, a software engineer in Toronto with full-stack
+              experience and a strong backend focus across Node.js, Express.js,
+              RESTful APIs, authentication workflows, database integration, and
+              secure application features, backed by modern frontend delivery with
+              React, Next.js, Redux, and TypeScript.
             </p>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <a className={primaryButtonClassName} href="#projects">
@@ -220,12 +235,12 @@ function App() {
       <main className="relative z-10 mx-auto max-w-[1160px]">
         <section className="mt-6 grid gap-4 md:grid-cols-3">
           <article className={`${panelClassName} rounded-3xl p-6`}>
-            <strong className="mb-2 block text-[2.35rem] text-stone-900 dark:text-stone-100">3+</strong>
+            <strong className="mb-2 block text-[2.35rem] text-stone-900 dark:text-stone-100">4+</strong>
             <span className="text-sm leading-7 text-stone-700 dark:text-stone-300">Years of software engineering experience</span>
           </article>
           <article className={`${panelClassName} rounded-3xl p-6`}>
-            <strong className="mb-2 block text-[2.35rem] text-stone-900 dark:text-stone-100">10+</strong>
-            <span className="text-sm leading-7 text-stone-700 dark:text-stone-300">Core technologies across frontend, backend, and cloud</span>
+            <strong className="mb-2 block text-[2.35rem] text-stone-900 dark:text-stone-100">25+</strong>
+            <span className="text-sm leading-7 text-stone-700 dark:text-stone-300">Technologies across backend, frontend, databases, cloud, and testing</span>
           </article>
           <article className={`${panelClassName} rounded-3xl p-6`}>
             <strong className="mb-2 block text-[2.35rem] text-stone-900 dark:text-stone-100">4</strong>
@@ -249,7 +264,7 @@ function App() {
         <section className="pt-24" id="projects">
           <div className="mb-7 max-w-[720px]">
             <p className={eyebrowClassName}>Selected Work</p>
-            <h2 className={sectionHeadingClassName}>Projects that show practical frontend and full-stack execution.</h2>
+            <h2 className={sectionHeadingClassName}>Projects that show practical backend and full-stack execution.</h2>
           </div>
           <div className="grid gap-4 lg:grid-cols-3">
             {projects.map((project) => (
@@ -265,7 +280,7 @@ function App() {
         <section className="grid gap-8 pt-24 lg:grid-cols-[0.9fr_1.1fr]" id="experience">
           <div className="max-w-[720px]">
             <p className={eyebrowClassName}>Experience</p>
-            <h2 className={sectionHeadingClassName}>Hands-on work across enterprise products and full-stack delivery.</h2>
+            <h2 className={sectionHeadingClassName}>Hands-on work across backend services, APIs, and full-stack delivery.</h2>
           </div>
 
           <div className="grid gap-4">
@@ -285,7 +300,7 @@ function App() {
         <section className="grid gap-8 pt-24 lg:grid-cols-[0.9fr_1.1fr]">
           <div className="max-w-[720px]">
             <p className={eyebrowClassName}>Core Skills</p>
-            <h2 className={sectionHeadingClassName}>Frontend, backend, database, testing, and cloud capabilities.</h2>
+            <h2 className={sectionHeadingClassName}>Backend, frontend, database, testing, and cloud capabilities.</h2>
           </div>
           <div className="flex flex-wrap gap-3">
             {skills.map((skill) => (
@@ -367,18 +382,18 @@ function App() {
             <h2 className="font-display text-[2.5rem] leading-[0.96] tracking-[-0.02em] text-stone-900 dark:text-stone-100">
               Let&apos;s build something solid.
             </h2>
-            <p className="mt-2 text-sm leading-7 text-stone-700 dark:text-stone-300">Toronto, CA</p>
+            <p className="mt-2 text-sm leading-7 text-stone-700 dark:text-stone-300">Toronto, ON</p>
           </div>
           <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-            <a className={primaryButtonClassName} href="mailto:bhaumik2705@gmail.com">
-              bhaumik2705@gmail.com
+            <a className={primaryButtonClassName} href="mailto:bhaumikpatel2705@gmail.com">
+              bhaumikpatel2705@gmail.com
             </a>
             <a className={primaryButtonClassName} href="tel:+12267242478">
               +1 (226) 724-2478
             </a>
             <a
               className={primaryButtonClassName}
-              href="https://www.linkedin.com/in/bhaumik-patel-1060a7391"
+              href="https://linkedin.com/in/bhaumik-patel-181124269"
               target="_blank"
               rel="noreferrer"
             >
